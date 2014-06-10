@@ -44,15 +44,20 @@ define("CLASSES", HTDOCS_ROOT . BASE_DIR . CLASSES_DIR);
 define("DEBUG", true);
 
 // dataset - see data folder for various example data files
-define("DATASET_FILE", HTDOCS_ROOT . BASE_DIR ."data/POI_trees_gent.json");
-//define("DATASET_FILE", HTDOCS_ROOT . BASE_DIR ."data/POI_trees_issy.json");
+//define("DATASET_FILE", HTDOCS_ROOT . BASE_DIR ."data/POI_trees_gent.json");
+define("DATASET_FILE", HTDOCS_ROOT . BASE_DIR ."data/POI_trees_issy.json");
 define("DATASET_ID", 36);
 define("DATASET_URL", SERVERNAME . BASE_DIR . "dataset.php");
 define("USE_DATABASE", false);
 
 // Map Options (coords point to center of Gent)
-define("MAP_CENTER_LATITUDE", 51.033261); 
-define("MAP_CENTER_LONGITUDE", 3.726488);
+/* Alternate coords : 
+ * Gent : 51.033261,3.726488
+ * Issy les Moulineaux : 48.824023,2.263932
+ * Athens : 37.976409,23.731327
+ */
+define("MAP_CENTER_LATITUDE", 48.824023); 
+define("MAP_CENTER_LONGITUDE", 2.263932);
 define("MAP_ZOOM", 16);
 
 // database
