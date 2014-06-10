@@ -98,7 +98,7 @@ function addMarkers()
         disableAutoPan: false,
         arrowPosition: 30,
         arrowStyle: 2,
-        hideCloseButton: true
+        hideCloseButton: true,
     });
 
     /* For every POI we add a marker with an attached infoBubble */
@@ -123,6 +123,7 @@ function addMarkers()
                 infoBubble.open(map, current_marker);
 
                 setTimeout("$('#poiBubble').parent().parent().css('overflow', 'hidden')", 100);
+                setTimeout("$('#poiBubble').parent().css('height', '90%')", 100);
             });
         }
     });
