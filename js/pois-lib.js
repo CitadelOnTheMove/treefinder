@@ -178,14 +178,15 @@ function setInfoWindowPoi(poi)
             "</div>";
     }
 
-    var contentTemplate =
-        "<div id='poiBubble'><a href='#page3' onclick='overrideDetailClick(\"" + poi.id + "\"); return false;'>" +
-        "<div class='title'>" +
-        poi.title +
-        "</div>" +
-        "<div class='address'>" + poi.description +
-        "</div>\n Year planted: " + getCitadel_attr(poi, "#Citadel_telephone").text +
-        "</a></div><div id='bubbleClose'><a href='' onclick='return overrideBubbleCloseClick();'><img src='images/close.png' width='25' height='25' alt='close' /></a></div>";
+    var contentTemplate = "<div id='poiBubble'>";
+    contentTemplate += "<div id='bubbleClose'><a href='' onclick='return overrideBubbleCloseClick();'><img src='images/close.png' width='25' height='25' alt='close' /></a></div>";
+    contentTemplate += "<a href='#page3' onclick='overrideDetailClick(\"" + poi.id + "\"); return false;'>";
+    contentTemplate += "<div class='title'>" + poi.title + "</div>";
+    if (poi.description) contentTemplate += "<div class='address'>" + poi.description + "</div>\n";
+    if (getCitadel_attr(poi, "#Citadel_image").text) contentTemplate += "<img src='" + getCitadel_attr(poi, "#Citadel_image").text + "' style='max-width: 100%;' />\n";
+    if (getCitadel_attr(poi, "#Citadel_telephone").text) contentTemplate += "<p>Year planted: " + getCitadel_attr(poi, "#Citadel_telephone").text + "</p>";
+    if (getCitadel_attr(poi, "#Citadel_website").text) contentTemplate += "<p><a target='_blank' href='" + getCitadel_attr(poi, "#Citadel_website").text + "'>More info</a></p>";
+    contentTemplate += "</a></div>";
 
     return contentTemplate;
 }
