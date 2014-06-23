@@ -296,15 +296,28 @@ header.ui-header, footer.ui-footer {
     width:25px;
     height:25px;
     display:inline-block;
+    /*
     padding-top:5px;
     padding-right:5px;
+    */
+    float: right;
+    padding: 0 0 3px 6px;
 }
 #poiBubble
 {
+    /*
     padding:15px;
     width:170px;
+    */
+    padding:5px;
+    width:220px;
     text-shadow:none;
     float:left;
+    max-height:100%;
+    overflow-y:auto;
+}
+#poiBubble img {
+    max-width:90%;
 }
 #poiBubble a {
     text-decoration: none;
