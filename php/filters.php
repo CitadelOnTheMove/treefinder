@@ -32,7 +32,7 @@ function printFilters() {
 			foreach($poi->category as $cat) {
 				if(!in_array($cat, $keys))  {
 					$keys[] = $cat;
-					$filters[] = new Filter(trim($cat), true);
+					$filters[] = new Filter($cat, true);
 				}
 			}
 		}
